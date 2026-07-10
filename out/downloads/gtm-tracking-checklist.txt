@@ -1,0 +1,6 @@
+GTM tracking demo checklist
+
+- Confirm viewport events push content_in_viewport.
+- Confirm CTA clicks push content_cta_click.
+- Confirm control buttons push content_control_interaction with action.text.
+- Confirm download CTAs set action.target to Download and content.media to File.

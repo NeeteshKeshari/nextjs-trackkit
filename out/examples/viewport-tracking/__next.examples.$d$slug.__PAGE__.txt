@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[81220,["/trackkit/_next/static/chunks/1_86nz8_3creb.js","/trackkit/_next/static/chunks/15-af1rz8w4q1.js"],""]
+3:I[77646,["/trackkit/_next/static/chunks/1_86nz8_3creb.js","/trackkit/_next/static/chunks/15-af1rz8w4q1.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"page","children":["$","section",null,{"className":"feature-card surface","children":[["$","span",null,{"className":"eyebrow","children":"Internal route"}],["$","h1",null,{"children":"Viewport Tracking"}],["$","p",null,{"className":"lede","children":"This route exists so homepage CTAs navigate to real internal pages while tracking click payloads."}],["$","div",null,{"className":"button-row","children":["$","$L2",null,{"className":"button-link button-link-primary","href":"/","children":"Back home"}]}]]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"mSMEOC-0bOR8uwrhD8hDW"}
+5:null
