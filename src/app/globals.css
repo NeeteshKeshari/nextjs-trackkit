@@ -131,6 +131,19 @@ a:hover {
   color: var(--primary);
 }
 
+.nav-links a.active,
+.nav-links a[aria-current="page"] {
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(49, 94, 251, 0.22);
+}
+
+.nav-links a.active:hover,
+.nav-links a[aria-current="page"]:hover {
+  background: var(--primary-dark);
+  color: #ffffff;
+}
+
 .site-footer {
   max-width: 1120px;
   margin: 0 auto;
@@ -353,10 +366,25 @@ h3 {
 
 .feature-card {
   display: grid;
-  align-content: start;
+  grid-template-rows: auto auto 1fr auto;
+  align-content: stretch;
   align-items: start;
   gap: 16px;
   padding: 24px;
+}
+
+.feature-card > .button-link,
+.feature-card > .control-button,
+.feature-card > .button-row,
+.feature-card > .feature-card-footer,
+.feature-card > .tracking-actions {
+  align-self: end;
+  margin-top: auto;
+}
+
+.feature-card > .button-link,
+.feature-card > .control-button {
+  width: 100%;
 }
 
 .feature-card p {

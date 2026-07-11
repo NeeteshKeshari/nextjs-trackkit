@@ -18,9 +18,9 @@ export default function Home() {
           <span className="eyebrow">Modern event tracking for web applications</span>
           <h1>Ship consistent dataLayer events without rebuilding every component.</h1>
           <p className="lede">
-            `nextjs-trackkit` gives teams a lightweight provider, declarative
-            data attributes, typed helpers, and a custom event API for generic
-            analytics tracking.
+            nextjs-trackkit gives teams a lightweight provider, React
+            components and hooks, data attributes, typed helpers, and custom
+            event support for generic analytics tracking.
           </p>
           <div className="button-row">
             <ButtonLink href="/setup" label="Open setup guide">
@@ -34,15 +34,16 @@ export default function Home() {
         <div className="hero-card surface-dark">
           <div className="hero-card-grid">
             <Badge>Package highlights</Badge>
-            <h3>One provider, many tracking patterns.</h3>
+            <h3>One provider, two easy tracking methods.</h3>
             <p>
-              Add data attributes for simple components, use helpers for complex
-              flows, and push custom event names when your analytics setup needs them.
+              Use React components and hooks for reusable CTAs, or add data
+              attributes directly in markup. Both methods push the same
+              consistent dataLayer event schema.
             </p>
             <div className="metric-grid">
+              <MetricPill label="Latest version" value="1.1.1" />
               <MetricPill label="Predefined events" value="6" />
-              <MetricPill label="Custom params" value="Any" />
-              <MetricPill label="Setup file" value="1" />
+              <MetricPill label="Tracking methods" value="2" />
             </div>
           </div>
         </div>
@@ -55,27 +56,29 @@ export default function Home() {
         </div>
         <div className="component-grid">
           <article className="feature-card surface">
-            <Badge>Declarative</Badge>
-            <h3>Track with data attributes</h3>
+            <Badge>React API</Badge>
+            <h3>Track with components and hooks</h3>
             <p>
-              Add `data-track-view` or `data-track-click` to your components and
-              inherit shared content context from parent sections.
+              Define tracking context once at a section level, then let reusable
+              links, buttons, cards, and design-system components inherit those
+              values automatically.
             </p>
           </article>
           <article className="feature-card surface">
-            <Badge tone="green">Manual</Badge>
-            <h3>Use typed helper functions</h3>
+            <Badge tone="green">Data Attributes</Badge>
+            <h3>Track directly in markup</h3>
             <p>
-              Fire CTA clicks, controls, video events, completion events, and
-              custom events from client components.
+              Add view and click attributes to existing components when you want
+              tracking without importing a React tracking component into every
+              file.
             </p>
           </article>
           <article className="feature-card surface">
-            <Badge tone="purple">Custom</Badge>
-            <h3>Add custom parameters</h3>
+            <Badge tone="purple">Advanced</Badge>
+            <h3>Use helpers and custom events</h3>
             <p>
-              Extend predefined event payloads with campaign IDs, experiment
-              metadata, user segments, or any tracking variable your team needs.
+              Fire video events, completion events, custom event names, and
+              custom parameters when your analytics model needs more control.
             </p>
           </article>
         </div>
@@ -84,27 +87,21 @@ export default function Home() {
       <section className="section">
         <div className="split-grid">
           <article className="feature-card surface">
-            <Badge tone="green">Install</Badge>
-            <h3>Start in minutes</h3>
-            <pre className="code-panel">{`npm install nextjs-trackkit
-
-// app/providers.tsx
-import { GtmTrackingProvider } from "nextjs-trackkit/react";
-
-export function Providers({ children }) {
-  return (
-    <GtmTrackingProvider gtmId={process.env.NEXT_PUBLIC_GTM_ID}>
-      {children}
-    </GtmTrackingProvider>
-  );
-}`}</pre>
+            <Badge tone="green">Recommended</Badge>
+            <h3>Choose the method that fits each component.</h3>
+            <ul>
+              <li>Use the React API for reusable sections, CTAs, and design systems.</li>
+              <li>Use data attributes for existing markup and simple page content.</li>
+              <li>Use manual helpers for videos, completions, and custom event flows.</li>
+              <li>Use custom parameters for campaigns, experiments, and business metadata.</li>
+            </ul>
           </article>
           <article className="feature-card surface">
             <Badge tone="purple">Next steps</Badge>
-            <h3>Use this website to test the package.</h3>
+            <h3>Use this website to learn and test TrackKit.</h3>
             <ul>
-              <li>Open the Setup page to copy install and configuration snippets.</li>
-              <li>Open the Demo page to fire every predefined event type.</li>
+              <li>Open the Setup page to compare the React API and data-attribute API.</li>
+              <li>Open the Demo page to fire predefined and custom event examples.</li>
               <li>Install DataLayer Checker in Chrome to inspect payloads.</li>
               <li>Use the Playground page to create custom events and parameters.</li>
             </ul>

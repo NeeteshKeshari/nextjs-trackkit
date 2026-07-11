@@ -2,14 +2,15 @@
   "name": "nextjs-gtm-tracking-demo",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev",
+    "dev": "ulimit -n 65536 2>/dev/null || true; next dev --hostname 127.0.0.1",
+    "dev:network": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "next": "^16.2.10",
-    "nextjs-trackkit": "^1.0.0",
+    "nextjs-trackkit": "^1.1.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
   },

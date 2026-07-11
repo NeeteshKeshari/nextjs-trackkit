@@ -154,19 +154,59 @@ export function DemoExperience() {
       >
         <div className="hero-copy">
           <span className="eyebrow">Demo</span>
-          <h1>Trigger every supported package event type.</h1>
+          <h1>Test TrackKit events across both tracking methods.</h1>
           <p className="lede">
-            Use this page with Google Chrome extension DataLayer Checker to
-            inspect each event payload as it is pushed to `window.dataLayer`.
+            Use this page with the Google Chrome extension DataLayer Checker to
+            inspect React API, data-attribute, manual helper, and custom event
+            payloads as they are pushed to `window.dataLayer`.
           </p>
           <div className="notice">
             <strong>Tip:</strong> Install the Chrome extension DataLayer Checker,
-            open DevTools, and click the buttons below to inspect event details.
+            open DevTools, and click the controls below to inspect event names,
+            content data, CTA data, custom parameters, and response values.
           </div>
         </div>
       </section>
 
       <section className="section">
+        <div className="section-header">
+          <span className="eyebrow">What this page covers</span>
+          <h2>Two simple tracking methods, plus advanced event helpers.</h2>
+        </div>
+        <div className="component-grid">
+          <article className="feature-card surface">
+            <Badge>React API</Badge>
+            <h3>Components and hooks</h3>
+            <p>
+              The latest package includes TrackKitSection, TrackKitLink,
+              TrackKitButton, and useTrackKitCta so reusable components can
+              inherit tracking context from parent sections.
+            </p>
+          </article>
+          <article className="feature-card surface">
+            <Badge tone="green">Data Attributes</Badge>
+            <h3>Markup-first tracking</h3>
+            <p>
+              Existing data-track attributes still work for viewport, click,
+              control, download, and inherited context examples.
+            </p>
+          </article>
+          <article className="feature-card surface">
+            <Badge tone="purple">Advanced</Badge>
+            <h3>Helpers and custom events</h3>
+            <p>
+              Manual helpers cover video, progress, completion, custom
+              parameters, and fully custom event names.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-header">
+          <span className="eyebrow">Data-attribute examples</span>
+          <h2>Automatic tracking from markup.</h2>
+        </div>
         <div className="component-grid">
           <article
             className="feature-card surface"
@@ -181,7 +221,7 @@ export function DemoExperience() {
             <h3>content_in_viewport</h3>
             <p>
               This card fires automatically when it enters the viewport through
-              declarative `data-track-view` attributes.
+              data-track-view attributes and inherited section context.
             </p>
           </article>
 
@@ -195,29 +235,43 @@ export function DemoExperience() {
           >
             <Badge tone="green">CTA</Badge>
             <h3>content_cta_click</h3>
-            <p>Click this link to trigger a declarative CTA click event.</p>
-            <ButtonLink href="/examples/declarative-cta" label="Open declarative CTA">
-              Open declarative CTA
+            <p>
+              Click this link to trigger a data-attribute CTA click event with
+              visible link text and destination details.
+            </p>
+            <ButtonLink href="/examples/declarative-cta" label="Open data-attribute CTA">
+              Open data-attribute CTA
             </ButtonLink>
           </article>
 
           <article className="feature-card surface">
-            <Badge tone="purple">Manual CTA</Badge>
+            <Badge tone="purple">React API note</Badge>
             <h3>content_cta_click</h3>
-            <p>Use the manual helper and add custom parameters to the payload.</p>
+            <p>
+              In production, the same CTA payload can come from TrackKitLink or
+              useTrackKitCta when you prefer reusable React components over
+              data attributes.
+            </p>
             <button className="control-button" type="button" onClick={trackManualCta}>
-              Track manual CTA
+              Track equivalent CTA
             </button>
           </article>
         </div>
       </section>
 
       <section className="section">
+        <div className="section-header">
+          <span className="eyebrow">Manual helper examples</span>
+          <h2>Events that depend on component or workflow state.</h2>
+        </div>
         <div className="component-grid">
           <article className="feature-card surface">
             <Badge>Control</Badge>
             <h3>content_control_interaction</h3>
-            <p>Fire a tab/control interaction with `action.text` and input metadata.</p>
+            <p>
+              Fire a tab or control interaction with action text and input
+              metadata.
+            </p>
             <button className="control-button" type="button" onClick={trackControl}>
               Track control
             </button>
@@ -226,7 +280,10 @@ export function DemoExperience() {
           <article className="feature-card surface">
             <Badge tone="green">Video</Badge>
             <h3>video_engagement</h3>
-            <p>Simulate a video play event with title, id, length, and location.</p>
+            <p>
+              Simulate a video play event with title, id, length, category, and
+              page location.
+            </p>
             <button className="control-button" type="button" onClick={trackVideoStart}>
               Track video play
             </button>
@@ -235,7 +292,7 @@ export function DemoExperience() {
           <article className="feature-card surface">
             <Badge tone="purple">Progress</Badge>
             <h3>video_progress</h3>
-            <p>Simulate a 50% video progress milestone.</p>
+            <p>Simulate a 50% video progress milestone for media analytics.</p>
             <button className="control-button" type="button" onClick={trackVideoHalf}>
               Track 50% progress
             </button>
@@ -244,11 +301,18 @@ export function DemoExperience() {
       </section>
 
       <section className="section">
+        <div className="section-header">
+          <span className="eyebrow">Completion, download, and custom events</span>
+          <h2>Special cases with clear payload rules.</h2>
+        </div>
         <div className="component-grid">
           <article className="feature-card surface">
             <Badge>Completion</Badge>
             <h3>action_completion</h3>
-            <p>Simulate a successful form or workflow completion.</p>
+            <p>
+              Simulate a successful form or workflow completion with response
+              status and custom metadata.
+            </p>
             <button className="control-button" type="button" onClick={trackCompletion}>
               Track completion
             </button>
@@ -257,7 +321,10 @@ export function DemoExperience() {
           <article className="feature-card surface">
             <Badge tone="green">Download</Badge>
             <h3>Download CTA</h3>
-            <p>Download CTAs force `content.media` to `File` and target to `Download`.</p>
+            <p>
+              Download CTAs force content media to File and target to Download
+              so reporting can separate file downloads from normal navigation.
+            </p>
             <ButtonLink
               href="/downloads/gtm-tracking-checklist.txt"
               label="Download checklist"
@@ -270,7 +337,10 @@ export function DemoExperience() {
           <article className="feature-card surface">
             <Badge tone="purple">Custom</Badge>
             <h3>trackCustomEvent</h3>
-            <p>Send a fully custom event name and arbitrary parameters.</p>
+            <p>
+              Send a fully custom event name and arbitrary parameters for flows
+              outside the predefined event schema.
+            </p>
             <button className="control-button" type="button" onClick={trackCustom}>
               Track custom event
             </button>
@@ -305,7 +375,8 @@ export function DemoExperience() {
             <ul>
               <li>Install DataLayer Checker in Google Chrome.</li>
               <li>Open this Demo page and clear previous dataLayer entries.</li>
-              <li>Click each event card button once.</li>
+              <li>Test one data-attribute event and one manual helper event.</li>
+              <li>Review the Setup page for React API component examples.</li>
               <li>Confirm event names and nested parameters match your tracking variables.</li>
             </ul>
           </article>
