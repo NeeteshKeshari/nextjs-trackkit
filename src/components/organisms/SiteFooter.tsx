@@ -10,7 +10,7 @@ export function SiteFooter() {
         </div>
         <div className="footer-links">
           <a
-            href="https://github.com/neeteshkeshari"
+            href="https://github.com/NeeteshKeshari/nextjs-trackkit"
             target="_blank"
             rel="noreferrer"
             data-track-click

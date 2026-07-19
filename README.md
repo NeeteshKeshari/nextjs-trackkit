@@ -27,6 +27,7 @@ It supports:
   validation.
 - **Demo** lets you trigger predefined events and inspect recent dataLayer
   payloads.
+- **SPA** shows `useTrackKitRouteRefresh()` across client-side route changes.
 - **Playground** lets you create any custom event name and JSON parameter object.
 
 ## Tracking Methods Shown
@@ -152,7 +153,7 @@ When `GITHUB_PAGES=true`, `next.config.ts` enables:
 This demo currently uses:
 
 ```json
-"nextjs-trackkit": "^1.1.1"
+"nextjs-trackkit": "^1.2.0"
 ```
 
 Update it after publishing newer package versions:

@@ -96,6 +96,10 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+.brand-text {
+  text-shadow: 0.5px 0.5px #fff;
+}
+
 .brand-mark img {
   width: 28px;
   height: 28px;
@@ -424,6 +428,16 @@ h3 {
   gap: 10px;
 }
 
+.tracking-console .tracking-actions {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tracking-console .tracking-actions h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
 .event-log {
   min-height: 200px;
   overflow: auto;
@@ -600,6 +614,6 @@ h3 {
   }
 
   .nav-links a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }

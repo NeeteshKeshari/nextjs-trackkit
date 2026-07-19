@@ -7,6 +7,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/setup", label: "Setup" },
   { href: "/demo", label: "Demo" },
+  { href: "/spa", label: "SPA" },
   { href: "/playground", label: "Playground" },
 ];
 
@@ -30,7 +31,7 @@ export function SiteHeader() {
         data-track-destination="Internal"
       >
         <span className="brand-mark">TK</span>
-        <span>Trackkit</span>
+        <span className="brand-text">Trackkit</span>
       </Link>
       <nav className="nav-links" aria-label="Main navigation">
         {navItems.map((item) => {

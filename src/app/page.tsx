@@ -41,7 +41,7 @@ export default function Home() {
               consistent dataLayer event schema.
             </p>
             <div className="metric-grid">
-              <MetricPill label="Latest version" value="1.1.1" />
+              <MetricPill label="Latest version" value="1.2.0" />
               <MetricPill label="Predefined events" value="6" />
               <MetricPill label="Tracking methods" value="2" />
             </div>
@@ -102,6 +102,7 @@ export default function Home() {
             <ul>
               <li>Open the Setup page to compare the React API and data-attribute API.</li>
               <li>Open the Demo page to fire predefined and custom event examples.</li>
+              <li>Open the SPA page to test viewport tracking across route changes.</li>
               <li>Install DataLayer Checker in Chrome to inspect payloads.</li>
               <li>Use the Playground page to create custom events and parameters.</li>
             </ul>
@@ -111,6 +112,9 @@ export default function Home() {
               </ButtonLink>
               <ButtonLink href="/demo" label="Go to demo page">
                 Go to Demo
+              </ButtonLink>
+              <ButtonLink href="/spa" label="Go to SPA demo page" variant="secondary">
+                Go to SPA
               </ButtonLink>
               <ButtonLink href="/playground" label="Go to playground page" variant="secondary">
                 Go to Playground
